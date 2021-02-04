@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+}
+
+
+#traverse {
+  display: flex;
+  list-style: none;
+
+  li {
+    font-weight: bold;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-left: 0.5rem;
+    &.active {
+      background-color: aquamarine;
+    }
+  }
+}

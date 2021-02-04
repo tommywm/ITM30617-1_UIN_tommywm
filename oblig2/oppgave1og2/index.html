@@ -1,0 +1,63 @@
+<html lang="nb">
+
+<head>
+	<!-- metas -->
+	<meta charset="utf-8" />
+	<meta name="author" content="Tommy W. Major" />
+	<meta name="version" content="1.0.0" />
+
+	<!-- IE, stop being an ass! behave DAMN IT!! -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- mobile metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- page info -->
+	<title>Oblig 2 - HTML, CSS &amp; JS</title>
+	<meta name="description" content="Lage en side som lar oss se og legge til to-do's" />
+
+	<!-- css -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<!-- js -->
+	<script src="assets/js/main.js"></script>
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+
+
+<body>
+	<header>
+		<p id="logo">hiof</p>
+		<p id="user">User user</p>
+	</header>
+
+	<main>
+		<!-- create new to-do -->
+		<form id="createTodoForm" action="" method="" autocomplete="off">
+			<fieldset>
+				<section id="title_input">
+					<label for="title">Title</label>
+					<input type="text" name="title" id="title" class="input" placeholder="Tittel på ny Todo" required />
+				</section>
+				<section id="content_input">
+					<label for="content">Content</label>
+					<textarea cols="50" rows="5" name="content" id="content" class="input" placeholder="Legg til innhold" required></textarea>
+				</section>
+				<button type="button" id="add">Add</button>
+				
+			</fieldset>
+		</form>
+
+		<section id="todo_displayarea">
+			<h1>My Todos</h1>
+
+			<!-- 6 pre-generated todos will be displayed here. All new todos will be added to this list -->
+			<section id="todos"></section>
+		</section>
+	</main>
+
+</body>
+</html>
