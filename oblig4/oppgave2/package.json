@@ -1,0 +1,42 @@
+{
+	"name": "oppgave2",
+	"version": "1.0.0",
+	"description": "Oblig 4 - Oppgave 2",
+	"author": "Tommy W. Major",
+	"license": "ISC",
+	"main": "index.js",
+	"scripts": {
+		"babel": "babel ./src/index.js --presets=@babel/preset-env --out-dir lib",
+		"dev": "webpack-dev-server --open --mode development",
+		"build": "webpack --mode production",
+		"start": "webpack-dev-server --config webpack.development.config.js --open"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.11.6",
+		"@babel/core": "^7.11.6",
+		"@babel/preset-env": "^7.11.5",
+		"@babel/preset-react": "7.10.4",
+		"babel-loader": "^8.1.0",
+		"css-loader": "^4.2.2",
+		"html-webpack-plugin": "^4.4.1",
+		"node-sass": "^4.14.1",
+		"sass-loader": "^10.0.2",
+		"style-loader": "^1.2.1",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0",
+		"webpack-merge": "^5.1.3"
+	}
+}
