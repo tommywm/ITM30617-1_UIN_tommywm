@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+	color: #2e2e2e;
+	text-align: center;
+}
+
+label,
+input {
+	display: block;
+}
+
+input {
+	padding: 20px;
+	margin: 20px auto;
+	width: 600px;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+}
