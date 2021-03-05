@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+}
+
+#welcome {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  border: 1px solid #333;
+  padding: 1rem;
+  color: #333;
+}
+
+#welcome span {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+button {
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=/starter.2b6518f3.css.map */

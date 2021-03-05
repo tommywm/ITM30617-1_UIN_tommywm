@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Øvingsoppgaver JS</title>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="/src.a2b27638.css"></head>
+
+  <body>
+    <!--
+			TODO: Use styles.scss and index.js to solve the tasks below
+		-->
+    <main id="app">
+      <!-- Add 5 li items to this ul -->
+      <ul></ul>
+
+      <!-- Give this an ID then select it so you can change the text -->
+      <p>I need a new text</p>
+
+      <!-- Flex the section so that items are equally spaced left to right -->
+      <section>
+        <article><h3>I want my wrapper element to have a border</h3></article>
+        <article><h3>I want my wrapper element to have box shadow</h3></article>
+        <article>
+          <h3>I want my wrapper element to have a background color</h3>
+        </article>
+      </section>
+
+      <!-- Should be able to remove element one by one -->
+      <ul>
+        <li>Item 1 <button type="button" class="btn">Remove</button></li>
+        <li>Item 2 <button type="button" class="btn">Remove</button></li>
+        <li>Item 3 <button type="button" class="btn">Remove</button></li>
+        <li>Item 4 <button type="button" class="btn">Remove</button></li>
+        <li>Item 5 <button type="button" class="btn">Remove</button></li>
+      </ul>
+
+      <!-- Should be able to add <li> item to the ul above -->
+      <button type="button" class="btn">Add</button>
+
+      <!-- Should be able to listen to change on input element -->
+      <!-- Should be able prevent site from refreshing when submitting and alert the content in input when submitting -->
+      <form method="POST">
+        <input type="text" placeholder="Placeholder text">
+        <button type="submit" class="btn">Alert me</button>
+      </form>
+
+      <!-- Make it possible to traverse left to right on the li elements -->
+      <!-- Make the active box have the teal background color (and none active transparent) -->
+      <section>
+        <ul id="traverse">
+          <li class="active">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+        <button type="button">Prev</button>
+        <button type="button">Next</button>
+      </section>
+    </main>
+
+    <script src="/src.a2b27638.js"></script>
+  </body>
+</html>

@@ -181,7 +181,7 @@ try {
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// You should not need a temporary variable anymore.
-		[a, b] = [b, a]
+		[a, b] = [b, a];
 
 		// Don't make changes below this line	
 		

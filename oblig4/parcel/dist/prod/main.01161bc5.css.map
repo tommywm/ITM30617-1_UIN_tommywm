@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,KACC,eAAA,CACA,cAGD,GACC,4BAAA,CACA","file":"main.01161bc5.css","sourceRoot":"../..","sourcesContent":["main {\n\tmax-width: 800px;\n\tmargin: 0 auto;\n}\n\nh1 {\n\tmargin-top: calc((100vh / 2) - 21px);\n\ttext-align: center;\n}\n"]}
