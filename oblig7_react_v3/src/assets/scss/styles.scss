@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+hgroup, fieldset {
+	text-align: center;
+}
+
+
+fieldset {
+	border: none;
+}
+
+label {
+	display: flex;
+	max-width: 500px;
+	margin: 0 auto;
+}
+.button {
+	display: block;
+}
+
+input, .button {
+	background-color: #333;
+	border: none;
+}
+
+input, .button, ::placeholder {
+	color: #fefefecc;
+}
+input {
+	width: 100%; 
+	border-radius: 0px 25px 25px 0px;
+}
+
+input:focus, .button:focus {
+	outline: none;
+}
+
+.button {	
+	height: 58px;
+	width: 58px;
+	line-height: 58px;
+	border-radius: 25px 0px 0px 25px;
+}
+
+/* 
+	WARNING: THIS IS NOT MY CODE !!
+
+	THIS IS CMD + C'ED/CMD + V'ED 
+
+	ONLY USED AS A FUN FINISHING TOUCH
+
+	SOURCE: https://www.darkcode.info/2018/10/3d-flip-card-effect-on-hover-using-only.html
+*/
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.card{
+  cursor: pointer;
+  width: 308px;
+  height: 450px;
+}
+
+.card, .front, .back, img {
+	border-radius: 20px;
+}
+
+// THIS CHUNK RIGHT HERE 👇🏼 IS ACTUALLY MY CODE 🤣
+.card:hover > .front > img, .card:hover > .back {
+	box-shadow: 4px 4px 10px #333;
+}
+
+.front,.back{
+  width: 308px;
+  height: 450px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+img{
+  width: 308px;
+	height: 450px;
+}
+
+.front{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+  background: #333;	// CHANGED COLOR HERE
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content{
+  color: #ffc600;		// CHANGED COLOR HERE
+  text-align: center;
+  width: 80%;
+}
+
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}

@@ -1,0 +1,62 @@
+{
+	"name": "oblig7_react_v3",
+	"version": "1.0.0",
+	"description": "Oblig 7 - React v3",
+	"keywords": [
+		"Oblig 7",
+		"react",
+		"frivillig"
+	],
+	"author": {
+		"name": "Tommy W. Major"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tommywm/ITM30617-1_UIN_tommywm/tree/main/oblig7_react_v3"
+	},
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --config webpack.production.config.js",
+		"start": "webpack serve --config webpack.development.config.js --open",
+		"clean": "rm -rf public"
+	},
+	"dependencies": {
+		"normalize.css": "8.0.1",
+		"prop-types": "15.7.2",
+		"react": "17.0.1",
+		"react-dom": "17.0.1",
+		"react-icons": "4.2.0",
+		"react-router-dom": "^5.2.0",
+		"styled-components": "^5.2.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.12.16",
+		"@babel/plugin-transform-runtime": "^7.12.15",
+		"@babel/preset-env": "^7.12.16",
+		"@babel/preset-react": "^7.12.13",
+		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.2.2",
+		"css-loader": "^5.0.2",
+		"dotenv": "^8.2.0",
+		"eslint": "^7.20.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-babel": "^9.0.0",
+		"eslint-config-prettier": "^7.2.0",
+		"eslint-plugin-html": "^6.1.1",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-react": "^7.22.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"html-webpack-plugin": "^5.1.0",
+		"node-sass": "^5.0.0",
+		"prettier": "^2.2.1",
+		"sass-loader": "^11.0.1",
+		"style-loader": "^2.0.0",
+		"webpack": "^5.22.0",
+		"webpack-cli": "^4.5.0",
+		"webpack-dev-server": "^3.11.2",
+		"webpack-merge": "^5.7.3"
+	}
+}
