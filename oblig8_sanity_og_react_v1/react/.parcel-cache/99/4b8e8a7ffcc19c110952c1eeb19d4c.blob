@@ -1,0 +1,98 @@
+"use strict";
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports["default"] = void 0;
+  var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+  var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+  var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+  var _react = require("react");
+  var _reactRouterDom = require("react-router-dom");
+  var _movieService = require("../utils/movieService");
+  var _Movie = _interopRequireDefault(require("../components/Movie"));
+  var _Styles = require("../styles/Styles");
+  var _jsxRuntime = require("react/jsx-runtime");
+  var _s = $RefreshSig$();
+  var Moviedetails = function Moviedetails() {
+    _s();
+    var _useState = (0, _react.useState)([]), _useState2 = (0, _slicedToArray2["default"])(_useState, 2), data = _useState2[0], setData = _useState2[1];
+    var _useState3 = (0, _react.useState)(null), _useState4 = (0, _slicedToArray2["default"])(_useState3, 2), error = _useState4[0], setError = _useState4[1];
+    var _useState5 = (0, _react.useState)(false), _useState6 = (0, _slicedToArray2["default"])(_useState5, 2), loading = _useState6[0], setLoading = _useState6[1];
+    var _useParams = (0, _reactRouterDom.useParams)(), slug = _useParams.slug;
+    var fetchData = /*#__PURE__*/(function () {
+      var _ref = (0, _asyncToGenerator2["default"])(/*#__PURE__*/_regenerator["default"].mark(function _callee() {
+        var movie;
+        return _regenerator["default"].wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                setLoading(true);
+                setError(null);
+                _context.prev = 2;
+                _context.next = 5;
+                return (0, _movieService.getMovie)(slug);
+              case 5:
+                movie = _context.sent;
+                setData(movie);
+                _context.next = 12;
+                break;
+              case 9:
+                _context.prev = 9;
+                _context.t0 = _context["catch"](2);
+                setError(_context.t0);
+              case 12:
+                _context.prev = 12;
+                setLoading(false);
+                return _context.finish(12);
+              case 15:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[2, 9, 12, 15]]);
+      }));
+      return function fetchData() {
+        return _ref.apply(this, arguments);
+      };
+    })();
+    (0, _react.useEffect)(function () {
+      fetchData();
+    }, []);
+    return (
+      /*#__PURE__*/(0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
+        children: [/*#__PURE__*/(0, _jsxRuntime.jsxs)("pre", {
+          children: ["Length: ", data.length]
+        }), error ? /*#__PURE__*/(0, _jsxRuntime.jsx)(_Styles.Info, {
+          children: error.message
+        }) : null, loading ? /*#__PURE__*/(0, _jsxRuntime.jsx)(_Styles.Info, {
+          children: "Loading ..."
+        }) : null, !error && !loading && ((data === null || data === void 0 ? void 0 : data.length) > 0 ? /*#__PURE__*/(0, _jsxRuntime.jsx)(_Movie["default"], {
+          title: data[0].title,
+          actor: data[0].actor,
+          description: data[0].description,
+          image: data[0].image
+        }, data[0].slug) : /*#__PURE__*/(0, _jsxRuntime.jsx)(_Styles.Info, {
+          children: "😱 No movies found.."
+        }))]
+      })
+    );
+  };
+  _s(Moviedetails, "Xpg7zhqdNPlW8fLXvRExosR1UgY=", false, function () {
+    return [_reactRouterDom.useParams];
+  });
+  _c = Moviedetails;
+  var _default = Moviedetails;
+  exports["default"] = _default;
+  var _c;
+  $RefreshReg$(_c, "Moviedetails");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

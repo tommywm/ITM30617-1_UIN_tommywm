@@ -1,0 +1,45 @@
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _styledComponents = require("styled-components");
+var _propTypes = _interopRequireDefault(require("prop-types"));
+var _Global = _interopRequireDefault(require("./Global"));
+var _jsxRuntime = require("react/jsx-runtime");
+var theme = {
+  body: '#FFF',
+  text: '#363537',
+  background: '#999',
+  colors: {
+    "default": '#333',
+    warning: '#ff6347',
+    info: '#167df6',
+    success: '#5cb85c'
+  },
+  breakpoints: {
+    sm: '(max-width: 420px)',
+    md: '(max-width: 768px)',
+    lg: '(max-width: 1300px)'
+  }
+};
+var Theme = function Theme(_ref) {
+  var children = _ref.children;
+  return (
+    /*#__PURE__*/(0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
+      children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_Global["default"], {}), /*#__PURE__*/(0, _jsxRuntime.jsx)(_styledComponents.ThemeProvider, {
+        theme: theme,
+        children: children
+      })]
+    })
+  );
+};
+_c = Theme;
+Theme.propTypes = {
+  children: _propTypes["default"].object.isRequired
+};
+var _default = Theme;
+exports["default"] = _default;
+var _c;
+$RefreshReg$(_c, "Theme");

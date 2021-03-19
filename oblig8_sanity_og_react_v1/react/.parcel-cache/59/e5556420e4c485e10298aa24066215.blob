@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head><link rel="stylesheet" href="/index.HASH_REF_2eebc93606fc40ddd4e0be3b75f63f93.css">
+	<meta charset="utf-8">
+	<meta name="author" content="Tommy W. Major">
+	<meta name="version" content="1.0.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<title>Oblig 8 - Sanity & React v1</title>
+	<meta name="description" content="React, Never stop learning">
+</head>
+
+<body>
+	<noscript>
+		You need to enable JavaScript to run this app.
+	</noscript>
+	<main id="app"></main>
+	<script src="/index.HASH_REF_0fa2489aa94c8731ee2aee9f3fafb3e2.js"></script>
+</body>
+
+</html>

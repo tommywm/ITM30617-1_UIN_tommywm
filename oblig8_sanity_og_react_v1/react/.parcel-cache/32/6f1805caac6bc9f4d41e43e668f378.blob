@@ -1,0 +1,21 @@
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _Routes = _interopRequireDefault(require("./routes/Routes"));
+var _Theme = _interopRequireDefault(require("./styles/Theme"));
+var _jsxRuntime = require("react/jsx-runtime");
+var App = function App() {
+  return (
+    /*#__PURE__*/(0, _jsxRuntime.jsx)(_Theme["default"], {
+      children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_Routes["default"], {})
+    })
+  );
+};
+_c = App;
+var _default = App;
+exports["default"] = _default;
+var _c;
+$RefreshReg$(_c, "App");
