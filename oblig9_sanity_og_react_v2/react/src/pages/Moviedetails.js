@@ -31,21 +31,14 @@ const Moviedetails = () => {
 
   return (
     <>
-      <pre>Length: {data.length}</pre>
       {error ? <Info>{error.message}</Info> : null}
       {loading ? <Info>Loading ...</Info> : null}
       {!error &&
         !loading &&
         (data?.length > 0 ? (
-          <Movie
-            key={data[0].slug}
-            title={data[0].title}
-            actor={data[0].actor}
-            description={data[0].description}
-            image={data[0].image}
-          />
+          <Movie key={data[0].slug} data={data} />
         ) : (
-          <Info>😱 No movies found..</Info>
+          <Info>😱 Failed to fetch the movie, please try again..</Info>
         ))}
     </>
   );

@@ -1,21 +1,19 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { getMovie } from '../utils/movieService';
-import Movie from '../components/Movie';
+import Movies from '../components/Movies';
+import { getMovies } from '../utils/movieService';
 import { Info } from '../styles/Styles';
 
-const Moviedetails = () => {
+const MoviesList = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { slug } = useParams();
 
   const fetchData = async () => {
     setLoading(true);
     setError(null);
     try {
-      const movie = await getMovie(slug);
-      setData(movie);
+      const movies = await getMovies();
+      setData(movies);
     } catch (error) {
       setError(error);
     } finally {
@@ -28,27 +26,19 @@ const Moviedetails = () => {
     // got a small warning for the hook..
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   return (
     <>
-      <pre>Length: {data.length}</pre>
       {error ? <Info>{error.message}</Info> : null}
       {loading ? <Info>Loading ...</Info> : null}
       {!error &&
         !loading &&
         (data?.length > 0 ? (
-          <Movie
-            key={data[0].slug}
-            title={data[0].title}
-            actor={data[0].actor}
-            description={data[0].description}
-            image={data[0].image}
-          />
+          <Movies data={data} />
         ) : (
-          <Info>😱 No movies found..</Info>
+          <Info>😱 Ingen filmer her!!</Info>
         ))}
     </>
   );
 };
 
-export default Moviedetails;
+export default MoviesList;

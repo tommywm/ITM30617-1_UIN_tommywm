@@ -31,7 +31,6 @@ const Moviedetails = () => {
 
   return (
     <>
-      <pre>Length: {data.length}</pre>
       {error ? <Info>{error.message}</Info> : null}
       {loading ? <Info>Loading ...</Info> : null}
       {!error &&
@@ -45,7 +44,7 @@ const Moviedetails = () => {
             image={data[0].image}
           />
         ) : (
-          <Info>😱 No movies found..</Info>
+          <Info>😱 Failed to fetch the movie, please try again..</Info>
         ))}
     </>
   );

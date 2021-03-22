@@ -30,7 +30,9 @@ const MoviesList = () => {
         (data?.length > 0 ? (
           <Movies data={data} />
         ) : (
-          <Info>😱 No movies found..</Info>
+          <Info>
+            😱 Ingen filmer her!! Klikk på knappen for å hente noen filmer..
+          </Info>
         ))}
 
       <Button type="button" id="fetch" onClick={handleClick}>

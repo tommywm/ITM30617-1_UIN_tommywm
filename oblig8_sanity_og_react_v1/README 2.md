@@ -6,13 +6,13 @@
 ### React:
 
 ```
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 ### Sanity:
 ```
-npm install
+yarn install
 sanity start
 ```
 
